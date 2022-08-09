@@ -10,6 +10,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import {reducers} from "./store/reducers";
+import {FoodListEffects} from "./store/effects/foodlist.effects";
 
 
 @NgModule({
@@ -22,9 +24,9 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    StoreModule.forRoot(reducers, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25}),
+    EffectsModule.forRoot([FoodListEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

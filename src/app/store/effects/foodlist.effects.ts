@@ -26,6 +26,24 @@ export class FoodListEffects {
   }
 
   getFoodList(): Observable<any> {
-    return new Observable<any>()
+    const resp =[
+      {
+        "food_id":1,
+        "isChecked":false,
+        "food_name":"Cupcake",
+        "calories":300,
+        "fat":4,
+        "carbs":2,
+      },
+      {
+        "food_id":2,
+        "isChecked":false,
+        "food_name":"Donut",
+        "calories":250,
+        "fat":4,
+        "carbs":2,
+      },
+    ];
+    return of(resp)
   }
 }

@@ -17,38 +17,15 @@
                   <th class="text-right">Actions</th>
                 </thead>
                 <tbody>
-                  <tr>
+                <tr *ngFor="let item of itemSource; let j = index; ">
                     <td>
-                      <p>Cupcake</p>
+                      <p>{{item.food_name}}</p>
                     </td>
                     <td>
-                      <p>300</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Cupcake</p>
-                    </td>
-                    <td>
-                      <p>300</p>
-                    </td>
-                    <td>
-                      <div style="gap: 10px; display: flex;">
-                        <button class="btn btn-primary btn-round">Add</button>
-                        <button class="btn btn-danger btn-round">
-                          Remove
-                        </button>
-                      </div>
+                      <p>{{item.calories}}</p>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <p>Cupcake</p>
-                    </td>
-                    <td>
-                      <p>300</p>
-                    </td>
-                  </tr>
+                
                 </tbody>
               </table>
             </div>
