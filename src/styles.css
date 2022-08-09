@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #f8f8f8;
+ }
+ .sidebar{
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgb(208, 225, 242);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+.content{
+    margin-left: 15%;
+    padding: 20px;
+    transition: 0.5s;
+}
